@@ -1,4 +1,4 @@
-FROM harbor.cyverse.org/vice/cli/xenial:latest
+FROM harbor.cyverse.org/vice/cli/xenial:latest # Change to Jetstream 2 address
 
 USER root 
 
@@ -93,7 +93,7 @@ RUN wget https://github.com/mslucash/Extension-Reclass/archive/master.zip && \
     cp /opt/Core-Model-v7-LINUX-7/build/extensions/Extension-Reclass-main/src/obj/Release/netstandard2.0/Landis.Extension.Output.BiomassReclass-v3.dll /opt/Core-Model-v7-LINUX-7/build/extensions/.
 
 # GIPL (WORKS)
-RUN wget https://github.com/LANDIS-II-Foundation/Library-GIPL/archive/master.zip && \
+# RUN wget https://github.com/LANDIS-II-Foundation/Library-GIPL/archive/master.zip && \
     unzip master.zip -d /opt/Core-Model-v7-LINUX-7/build/extensions/ && \
     rm master.zip && \
     mv /opt/Core-Model-v7-LINUX-7/build/extensions/Library-GIPL-master/ /opt/Core-Model-v7-LINUX-7/build/extensions/Library-GIPL/ && \
@@ -102,7 +102,7 @@ RUN wget https://github.com/LANDIS-II-Foundation/Library-GIPL/archive/master.zip
     cp /opt/Core-Model-v7-LINUX-7/build/extensions/Library-GIPL/src/bin/Debug/netstandard2.0/Landis.Extension.GiplDamm.dll /opt/Core-Model-v7-LINUX-7/build/extensions/.  
  
 # SHAW (WORKS)
-RUN wget https://github.com/LANDIS-II-Foundation/Library-Shaw/archive/master.zip && \
+# RUN wget https://github.com/LANDIS-II-Foundation/Library-Shaw/archive/master.zip && \
     unzip master.zip -d /opt/Core-Model-v7-LINUX-7/build/extensions/ && \
     rm master.zip && \
     mv /opt/Core-Model-v7-LINUX-7/build/extensions/Library-Shaw-master/ /opt/Core-Model-v7-LINUX-7/build/extensions/Library-Shaw/ && \
@@ -111,7 +111,7 @@ RUN wget https://github.com/LANDIS-II-Foundation/Library-Shaw/archive/master.zip
     cp /opt/Core-Model-v7-LINUX-7/build/extensions/Library-Shaw/src/bin/Debug/netstandard2.0/Landis.Extension.ShawDamm.dll /opt/Core-Model-v7-LINUX-7/build/extensions/. 
 
 # DGS (WORKS)
-RUN wget https://github.com/LANDIS-II-Foundation/Extension-DGS-Succession/archive/master.zip && \
+# RUN wget https://github.com/LANDIS-II-Foundation/Extension-DGS-Succession/archive/master.zip && \
     unzip master.zip -d /opt/Core-Model-v7-LINUX-7/build/extensions/ && \
     rm master.zip && \
     mv /opt/Core-Model-v7-LINUX-7/build/extensions/Extension-DGS-Succession-master/ /opt/Core-Model-v7-LINUX-7/build/extensions/Extension-DGS-Succession/ && \
